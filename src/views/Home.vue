@@ -1,7 +1,8 @@
 
 <template>
   <div>
-    <h1>Hi {{ username }}</h1>
+    <h1 v-if="e_name==''">Hi {{ username }}</h1>
+    <h1 v-else >Hi {{ e_name }}</h1>
     <p>{{ secretMessage }}</p>
     <input type="button" value="Logout" @click="logout" />
   </div>
@@ -14,7 +15,8 @@ export default {
   data() {
     return {
       secretMessage: '',
-      username: ''
+      username: '',
+      e_name:''
     };
   },
   async created() {
@@ -23,6 +25,7 @@ export default {
     }
 
     this.username = this.$store.getters.getUser.username;
+    this.e_name = this.$store.getters.getUser.e_name;
 
     this.secretMessage = await AuthService.getSecretContent();
   },

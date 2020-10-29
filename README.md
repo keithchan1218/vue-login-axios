@@ -23,4 +23,4 @@ npm run lint
 ### Customize configuration
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
-Credit: https://webdeasy.de/en/complete-login-system-with-node-js-vue-js-vuex-part-2-2/
+Credit: [webdeasy](https://webdeasy.de/en/complete-login-system-with-node-js-vue-js-vuex-part-2-2/)
